@@ -1,6 +1,11 @@
 /* GENERAL STYLES */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 body {
-	font-family: Arial, San-Serif;
+	font-family: 'Do Hyeon', sans-serif;
 	font-size: 100%;
 }
 ul {
@@ -19,7 +24,7 @@ p {
 }
 .container {
 	margin: 0 auto;
-	width: 960px;
+	max-width: 960px;
 }
 
 /* HEADER */
@@ -38,6 +43,7 @@ p {
 	background-color: #222;
 	border-color: #101010;
 	min-height: 64px;
+	width: 100%;
 }
 .page-navigation li {
 	float: left;
@@ -101,11 +107,11 @@ button:hover {
 	box-sizing: border-box;
 }
 .collections > div:first-child {
-	padding-left: 0;
+	padding-left: 0px;
 	padding-right: 10px;
 }
 .collections > div:last-child {
-	padding-right: 0;
+	padding-right: 0px;
 	padding-left: 10px;
 }
 .collection-item {
@@ -113,10 +119,13 @@ button:hover {
 }
 .collection-item img,
 .collection-item video {
+	display: inline-block;
 	width: 100%;
+	height: auto;
 }
 .collection-text {
 	padding: 0 20px 20px 20px;
+	max-width: 90%;
 }
 .collection-text h3 {
 	color: yellowgreen;
@@ -141,4 +150,46 @@ button:hover {
 	color: white;
 	padding: 20px 0;
 	margin-top: 30px;
+}
+
+.footer p {
+	margin-left: 10px;
+}
+
+@media (max-width: 992px) {
+	.collection-item-outer {
+		width: 50%;
+		margin-bottom: 10px;
+		float: left;
+	}
+	.collections > div:first-child {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.collections > div:last-child {
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+
+@media (max-width: 	768px) {
+	.page-navigation__wrap {
+		padding: 0 15px;
+	}
+	.page-navigation__list {
+		display: block;
+	}
+	.page-navigation__list li {
+		display: inline-block;
+		float: none;
+	}
+	.login {
+		float: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.collection-item-outer {
+		width: 100%;
+	}
 }
